@@ -1,0 +1,174 @@
+.main-body {
+  &__chip-options {
+    position: relative;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    
+    .options {
+      height: 56px;
+      position: fixed;
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;  
+      background-color: #ffffff;
+    }
+
+    .material-icon {
+      width: 106px;
+      height: 56px;
+      position: absolute;
+      z-index: 1000;
+      display: flex;
+      flex-direction: row;
+
+      span {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+      }
+
+      .space {
+        width: 50px;
+        height: 56px;
+        z-index: 1000;
+      }
+    }
+
+    .to-right {
+      top: 56px;
+      left: calc(240px + 20px);
+      display: none;
+      position: fixed;
+
+      .space {
+        background-image: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 1),
+          rgba(255, 255, 255, 0)
+        );
+      }
+
+      a {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+      }
+
+      a:hover {
+        background-color: #ffffff;
+        width: 56px;
+
+        span {
+          cursor: pointer;
+          background-color: var(--background-input);
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;  
+        }
+      }
+    }
+
+    .to-left {
+      top: 56px;
+      right: 0px;
+      position: fixed;
+
+      .space {
+        background-image: linear-gradient(
+          to left,
+          rgba(255, 255, 255, 1),
+          rgba(255, 255, 255, 0)
+        );
+      }
+
+      a {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+      }
+
+      a:hover {
+        background-color: #ffffff;
+        width: 56px;
+
+        span {
+          cursor: pointer;
+          background-color: var(--background-input);
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;  
+        }
+      }
+    }
+
+    .chip-option {
+      background-color: var(--background-input);
+      border-radius: 8px;
+      padding: 0px 12px;
+    }
+
+    .mat-mdc-chip-selected {
+      background-color: #000000;
+    }
+
+    .mdc-evolution-chip--selected {
+      --mdc-chip-with-avatar-avatar-size: 0px;
+    }
+  }
+
+  &__videos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    row-gap: 8px;
+    column-gap: 8px;
+    margin: 24px 40px 0px 40px;
+
+    .video {
+      margin: 0px 8px 40px 8px;
+      .thumbnail {
+        iframe {
+          width: 100%;
+          height: 200px;
+          border-radius: 12px;
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        align-items: flex-start;
+        margin-top: 12px;
+
+        .avatar {
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+          }
+        }
+
+        .description {
+          p {
+            font-size: 14px;
+            color: var(--text-description);
+          }
+
+          p.title {
+            font-size: 18px;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+}

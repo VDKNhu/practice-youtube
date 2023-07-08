@@ -1,0 +1,18 @@
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+
+    app-side-nav {
+        position: absolute;
+        top: 56px;
+        left: 0px;
+        width: 242px;
+    }
+}
+
+body {
+    padding-top: 56px;
+    padding-left: 260px;
+}

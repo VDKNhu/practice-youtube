@@ -1,0 +1,83 @@
+<div class="side-nav">
+  <div class="side-nav__section-1">
+    <ng-container *ngFor="let item of section1">
+      <a class="item" title="{{item.title}}">
+        <div class="material-icon">
+          <span class="material-symbols-outlined"> {{ item.icon }} </span>
+        </div>
+        <p>{{ item.title }}</p>
+      </a>
+    </ng-container>
+  </div>
+  <hr />
+  <div class="side-nav__section-2">
+    <ng-container *ngFor="let item of section2">
+      <a class="item" title="{{item.title}}">
+        <div class="material-icon">
+          <span class="material-symbols-outlined"> {{ item.icon }} </span>
+        </div>
+        <p>{{ item.title }}</p>
+      </a>
+    </ng-container>
+  </div>
+  <hr />
+  <div class="side-nav__subcriptions">
+    <ng-container *ngFor="let item of subscriptions">
+      <a class="item" title="{{item.name}}">
+        <img src="{{ item.avatar }}" />
+        <p>{{ item.name }}</p>
+      </a>
+    </ng-container>
+    <a class="item">
+        <div class="material-icon">
+          <span class="material-icons-outlined"> expand_more </span>
+        </div>
+        <p>Show 37 more</p>
+    </a>
+  </div>
+  <hr />
+  <div class="side-nav__explore">
+    <ng-container *ngFor="let item of explore">
+      <a class="item" title="{{item.title}}">
+        <div class="material-icon">
+          <span class="material-symbols-outlined"> {{ item.icon }} </span>
+        </div>
+        <p>{{ item.title }}</p>
+      </a>
+    </ng-container>
+  </div>
+  <hr />
+  <div class="side-nav__more">
+    <ng-container *ngFor="let item of more">
+      <a class="item" title="{{item.title}}">
+        <img src="{{ item.icon }}" />
+        <p>{{ item.title }}</p>
+      </a>
+    </ng-container>
+  </div>
+  <hr />
+  <div class="side-nav__setting">
+    <ng-container *ngFor="let item of setting">
+      <a class="item" title="{{item.title}}">
+        <div class="material-icon">
+          <span class="material-symbols-outlined"> {{ item.icon }} </span>
+        </div>
+        <p>{{ item.title }}</p>
+      </a>
+    </ng-container>
+  </div>
+  <hr />
+  <div class="side-nav__about">
+    <div class="about1">
+      <ng-container *ngFor="let item of about1">
+        <a href="">{{ item }}</a>
+      </ng-container>
+    </div>
+    <div class="about2">
+      <ng-container *ngFor="let item of about2">
+        <a href="">{{ item }}</a>
+      </ng-container>
+    </div>
+    <p><span>&copy;</span> 2023 Google LLC</p>
+  </div>
+</div>

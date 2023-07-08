@@ -1,0 +1,43 @@
+<div class="main-body">
+  <div class="main-body__chip-options">
+    <div class="material-icon to-right">
+      <a title="Previous">
+        <span class="material-icons-outlined"> chevron_left </span>
+      </a>
+      <div class="space"></div>
+    </div>
+    <div class="options">
+      <mat-chip-listbox
+        aria-label="Fish selection"
+        *ngFor="let opt of optionLabels"
+      >
+        <mat-chip-option class="chip-option">{{ opt }}</mat-chip-option>
+      </mat-chip-listbox>
+    </div>
+    <div class="material-icon to-left">
+      <div class="space"></div>
+      <a title="Next">
+        <span class="material-icons-outlined"> chevron_right </span>
+      </a>
+    </div>
+  </div>
+  <div class="main-body__videos">
+    <ng-container *ngFor="let video of videos">
+      <a class="video" routerLink="watch/{{video.id}}">
+        <div class="thumbnail">
+          <iframe [src]="video.thumbnail | safeUrl" frameborder="0"></iframe>
+        </div>
+        <div class="info">
+          <div class="avatar">
+            <img [src]="video.avatar | safeUrl" alt="Avatar user">
+          </div>
+          <div class="description">
+            <p class="title">{{video.title}}</p>
+            <p>{{video.channel}}</p>
+            <p>{{video.view}} views &deg; {{video.createdDate}}</p>
+          </div>
+        </div>
+      </a>
+    </ng-container>
+  </div>
+</div>
