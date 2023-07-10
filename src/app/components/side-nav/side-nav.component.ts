@@ -17,7 +17,7 @@ export class SideNavComponent {
     },
     {
       title: 'Subscriptions',
-      icon: 'library_add_check'
+      icon: 'subscriptions'
     }
   ];
   section2 = [

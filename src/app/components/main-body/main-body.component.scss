@@ -128,8 +128,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    row-gap: 8px;
-    column-gap: 8px;
+    gap: 8px;
     margin: 24px 40px 0px 40px;
 
     .video {
@@ -154,6 +153,7 @@
             width: 40px;
             height: 40px;
             border-radius: 20px;
+            object-fit: cover;
           }
         }
 

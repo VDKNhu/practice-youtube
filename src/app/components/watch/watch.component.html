@@ -1,3 +1,66 @@
 <div class="watch">
-    
+  <div class="watch__video">
+    <div class="video">
+      <iframe [src]="video.thumbnail | safeUrl" frameborder="0"></iframe>
+    </div>
+    <div class="description">
+      <strong class="title">{{video.title}}</strong>
+      <div class="sub-info">
+        <div class="author">
+          <img [src]="video.avatar | safeUrl" alt="Author avatar" />
+          <div class="channel">
+            <p class="channel-name">{{video.channel}}</p>
+            <p class="channel-subscribers">{{video.subscribers}} subscribers</p>
+          </div>
+          <a class="btn-subscribe">Subscribe</a>
+        </div>
+        <div class="interaction">
+          <div class="emotion">
+            <a title="I like this">
+              <span class="material-icons-outlined"> thumb_up </span> &nbsp;{{video.viewers}}
+            </a>
+            <a title="I dislike this">
+              <span class="material-icons-outlined"> thumb_down </span>
+            </a>
+          </div>
+          <a title="Share">
+            <span class="material-symbols-outlined"> share </span> &nbsp;Share
+          </a>
+          <a title="Download">
+            <span class="material-symbols-outlined"> download </span>
+            &nbsp;Download
+          </a>
+          <a title="Clip">
+            <span class="material-symbols-outlined"> cut </span> &nbsp;Clip
+          </a>
+          <a class="more-icon">
+            <span class="material-icons-outlined" (click)="showWrapBtns()"> more_horiz </span>
+          </a>
+        </div>
+        <div class="btn-wrap">
+          <a>
+            <span class="material-icons-outlined"> volunteer_activism </span> &nbsp;Thanks
+          </a>
+          <a>
+            <span class="material-icons-outlined"> playlist_add </span> &nbsp;Save
+          </a>
+          <a>
+            <span class="material-icons-outlined"> flag </span> &nbsp;Report
+          </a>
+          <a>
+            <span class="material-icons-outlined"> description </span> &nbsp;Show transcript
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="watch__recommendation">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus vero
+      officiis numquam non omnis, iure, necessitatibus voluptas excepturi
+      obcaecati soluta dicta dignissimos, repellat perferendis quaerat autem
+      consequuntur facere deleniti accusantium!
+    </p>
+  </div>
+  <div class="watch__comment"></div>
 </div>
