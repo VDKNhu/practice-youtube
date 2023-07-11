@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Video } from 'src/app/interfaces/video';
-import { VideosService } from 'src/app/services/videos.service';
+import { Video } from 'src/app/core/models/video.model';
+import { VideosService } from 'src/app/core/services/videos.service';
 
 @Component({
   selector: 'app-main-body',
@@ -13,7 +13,7 @@ export class MainBodyComponent implements OnInit {
   //   {
   //     id: '-OwDIQ-WNmg',
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -22,7 +22,7 @@ export class MainBodyComponent implements OnInit {
   //   {
   //     id: '-OwDIQ-WNmg',
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -30,7 +30,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -38,7 +38,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -46,7 +46,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -54,7 +54,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -62,7 +62,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -70,7 +70,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -78,7 +78,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -86,7 +86,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -94,7 +94,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -102,7 +102,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -110,7 +110,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -118,7 +118,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -126,7 +126,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -134,7 +134,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -142,7 +142,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -150,7 +150,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -158,7 +158,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -166,7 +166,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -174,7 +174,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -182,7 +182,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -190,7 +190,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,
@@ -198,7 +198,7 @@ export class MainBodyComponent implements OnInit {
   //   },
   //   {
   //     thumbnail: 'https://www.youtube.com/embed/-OwDIQ-WNmg',
-  //     avatar: './../../../assets/photos/avatar.jpg',
+  //     avatar: './../../../assets/images/avatar.jpg',
   //     title: '𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 믿듣탱 태연의 띵곡 모음 ✨',
   //     channel: 'SMTOWN',
   //     view: 60000000,

@@ -11,7 +11,7 @@ import { MainBodyComponent } from './components/main-body/main-body.component';
 import { WatchComponent } from './components/watch/watch.component';
 import { AddVideoDialogComponent } from './components/add-video-dialog/add-video-dialog.component';
 
-import { SafeUrlPipe } from './shared/safe-url.pipe';
+import { SafeUrlPipe } from './core/pipes/safe-url.pipe';
 
 // Angular Material
 import { MatBadgeModule } from '@angular/material/badge';

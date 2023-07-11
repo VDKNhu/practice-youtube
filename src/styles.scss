@@ -5,6 +5,8 @@
   --text-description: #606060;
   --border-input: #ccc;
   --background-input: #edecec;
+  --black: #000000;
+  --white: #ffffff;
 }
 
 @font-face {
@@ -15,24 +17,6 @@
     format("woff2");
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
     U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: "Roboto Mono";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/robotomono/v22/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_QOW4Ep0.woff2)
-    format("woff2");
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek */
-@font-face {
-  font-family: "Roboto Mono";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/robotomono/v22/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_R-W4Ep0.woff2)
-    format("woff2");
-  unicode-range: U+0370-03FF;
 }
 /* vietnamese */
 @font-face {
@@ -67,16 +51,13 @@
     U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #0f0f0f;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #606060;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
 }
 
 body {
@@ -85,14 +66,50 @@ body {
   box-sizing: border-box;
   font-family: "Roboto Mono", sans-serif;
   font-size: 16px;
-  color: #000000;
-  background-color: #ffffff;
+  color: var(--black);
+  background-color: var(--white);
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
+h1 {
+  margin-bottom: 0;
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+h3 {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+h4 {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 button,
@@ -104,34 +121,17 @@ input {
   outline: 0 !important;
 }
 
-a {
-  text-decoration: none;
-  color: #000000;
+// Thumbnail----------------------------------------------------------------
+::-webkit-scrollbar {
+  width: 5px;
 }
 
-a:hover {
-  text-decoration: none;
+::-webkit-scrollbar-thumb {
+  background: #0f0f0f;
 }
 
-.btn,
-.btn.focus,
-.btn:active,
-.btn.active,
-.btn:focus {
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  -o-box-shadow: none !important;
-  -ms-box-shadow: none !important;
-  box-shadow: none !important;
-  border: 0;
-}
-
-img {
-  -webkit-user-select: none !important;
-  -moz-user-select: none !important;
-  -o-user-select: none !important;
-  -ms-user-select: none !important;
-  user-select: none !important;
+::-webkit-scrollbar-thumb:hover {
+  background: #606060;
 }
 
 

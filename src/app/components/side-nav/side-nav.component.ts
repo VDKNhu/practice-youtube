@@ -44,37 +44,37 @@ export class SideNavComponent {
   ];
   subscriptions = [
     { 
-      avatar: './../../../assets/photos/avatar.jpg',
+      avatar: './../../../assets/images/avatar.jpg',
       name: 'HaHiHe1',
       hasNewPost: true
     },
     { 
-      avatar: './../../../assets/photos/avatar.jpg',
+      avatar: './../../../assets/images/avatar.jpg',
       name: 'HaHiHe2',
       hasNewPost: true
     },
     { 
-      avatar: './../../../assets/photos/avatar.jpg',
+      avatar: './../../../assets/images/avatar.jpg',
       name: 'HaHiHe3',
       hasNewPost: false
     },
     { 
-      avatar: './../../../assets/photos/avatar.jpg',
+      avatar: './../../../assets/images/avatar.jpg',
       name: 'HaHiHe4',
       hasNewPost: true
     },
     { 
-      avatar: './../../../assets/photos/avatar.jpg',
+      avatar: './../../../assets/images/avatar.jpg',
       name: 'HaHiHe5',
       hasNewPost: true
     },
     { 
-      avatar: './../../../assets/photos/avatar.jpg',
+      avatar: './../../../assets/images/avatar.jpg',
       name: 'HaHiHe6',
       hasNewPost: false
     },
     { 
-      avatar: './../../../assets/photos/avatar.jpg',
+      avatar: './../../../assets/images/avatar.jpg',
       name: 'HaHiHe7',
       hasNewPost: true
     },
@@ -104,19 +104,19 @@ export class SideNavComponent {
   more = [
     {
       title: 'YouTube Premium',
-      icon: './../../../assets/photos/favicon_32x32.png'
+      icon: './../../../assets/images/favicon_32x32.png'
     },
     {
       title: 'YouTube Studio',
-      icon: './../../../assets/photos/polygon-youtube-logo.png'
+      icon: './../../../assets/images/polygon-youtube-logo.png'
     },
     {
       title: 'YouTube Music',
-      icon: './../../../assets/photos/circle-youtube-logo.png'
+      icon: './../../../assets/images/circle-youtube-logo.png'
     },
     {
       title: 'YouTube Kids',
-      icon: './../../../assets/photos/kid-youtube-logo.png'
+      icon: './../../../assets/images/kid-youtube-logo.png'
     }
   ];
   setting = [

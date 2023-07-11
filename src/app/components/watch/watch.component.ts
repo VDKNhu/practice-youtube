@@ -1,7 +1,7 @@
-import { VideosService } from 'src/app/services/videos.service';
+import { VideosService } from 'src/app/core/services/videos.service';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Video } from 'src/app/interfaces/video';
+import { Video } from 'src/app/core/models/video.model';
 
 @Component({
   selector: 'app-watch',

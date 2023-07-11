@@ -48,4 +48,4 @@ Thumbs.db
 
 # Others
 /src/environments
-.package-lock.json
+package-lock.json

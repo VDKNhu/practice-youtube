@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map, of } from 'rxjs';
-import { Video } from '../interfaces/video';
+import { Video } from '../models/video.model';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 

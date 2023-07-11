@@ -4,7 +4,7 @@
     height: 56px;
     display: flex;
     align-items: center;
-    background-color: #ffffff;
+    background-color: var(--white);
     
     .options {
       height: 56px;
@@ -15,7 +15,7 @@
       align-items: center;
       width: 100%;
       overflow: hidden;  
-      background-color: #ffffff;
+      background-color: var(--white);
     }
 
     .material-icon {
@@ -32,7 +32,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #ffffff;
+        background-color: var(--white);
       }
 
       .space {
@@ -63,7 +63,7 @@
       }
 
       a:hover {
-        background-color: #ffffff;
+        background-color: var(--white);
         width: 56px;
 
         span {
@@ -96,7 +96,7 @@
       }
 
       a:hover {
-        background-color: #ffffff;
+        background-color: var(--white);
         width: 56px;
 
         span {
@@ -116,7 +116,7 @@
     }
 
     .mat-mdc-chip-selected {
-      background-color: #000000;
+      background-color: var(--black);
     }
 
     .mdc-evolution-chip--selected {
@@ -159,13 +159,13 @@
 
         .description {
           p {
-            font-size: 14px;
+            font-size: 0.8rem;
             color: var(--text-description);
           }
 
           p.title {
-            font-size: 18px;
-            color: #000000;
+            font-size: 1rem;
+            color: var(--black);
           }
         }
       }
