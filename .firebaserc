@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "practice-9d3fe": {
+      "hosting": {
+        "practice-youtube": [
+          "practice-9d3fe"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "practice-9d3fe"
+  }
+}

@@ -211,9 +211,8 @@ export class MainBodyComponent implements OnInit {
   constructor(private videoService: VideosService) {}
 
   ngOnInit(): void {
-      this.videoService.getVideos().subscribe((data) => {
-        this.videos = data;
-      });
-
+    this.videoService.getVideos().subscribe((data) => {
+      this.videos = data;
+    });
   }
 }

@@ -1,26 +1,21 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, map, of, tap } from 'rxjs';
+import { Observable, catchError, map, of } from 'rxjs';
 import { Video } from '../interfaces/video';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+
 
 @Injectable({
   providedIn: 'root',
 })
 export class VideosService {
-  private baseUrl = 'http://127.0.0.1:5001/practice-9d3fe/us-central1/app'; // URL to web api
-
-  httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
-  };
-
-  constructor(private http: HttpClient) {}
+  constructor(private store: AngularFirestore) {}
 
   /** GET heroes from the server */
-  getVideos(): Observable<Video[]> {
-    const url = `${this.baseUrl}/videos`;
-    return this.http.get<Video[]>(url).pipe(
-      map((videos: Video[]) => {
-        return videos.map((video) => {
+  getVideos(): Observable<Video[]> { 
+    return (this.store.collection('videos').valueChanges({ idField: 'id' }) as Observable<Video[]>)
+    .pipe(
+      map((data: Video[]) => {
+        return data.map((video) => {
           return {
             id: video.id,
             thumbnail: video.thumbnail.replace('watch?v=', 'embed/'),
@@ -31,30 +26,30 @@ export class VideosService {
             subscribers: video.subscribers,
             postedDate: video.postedDate,
           };
-        });
+        }); 
       }),
-      catchError(this.handleError<Video[]>('getVideos', []))
-    );
+      catchError(this.handleError<Video[]>(`getVideos`))
+    )
   }
 
   /** GET hero by id. Will 404 if id not found */
   getVideo(id: string): Observable<Video> {
-    const url = `${this.baseUrl}/videos/${id}`;
-    return this.http.get<Video>(url).pipe(
+    return (this.store.collection('videos').doc(id).valueChanges() as Observable<Video>)
+    .pipe(
       map((video: Video) => {
-        return {
-          id: video.id,
-          thumbnail: video.thumbnail.replace('watch?v=', 'embed/'),
-          avatar: video.avatar,
-          title: video.title,
-          channel: video.channel,
-          viewers: video.viewers,
-          subscribers: video.subscribers,
-          postedDate: video.postedDate,
-        };
-      }),
-      catchError(this.handleError<Video>(`getVideo id=${id}`))
-    );
+          return {
+            id: video.id,
+            thumbnail: video.thumbnail.replace('watch?v=', 'embed/'),
+            avatar: video.avatar,
+            title: video.title,
+            channel: video.channel,
+            viewers: video.viewers,
+            subscribers: video.subscribers,
+            postedDate: video.postedDate,
+          };
+        }),
+      catchError(this.handleError<Video>(`getVideos id=${id}`))
+    )
   }
 
   /**

@@ -32,7 +32,6 @@ export class WatchComponent {
 
   getVideo(id: string) {
     this.videoService.getVideo(this.id).subscribe((video) => {
-      console.log(video);
       this.video = video;
     })
   }

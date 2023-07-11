@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "practice-youtube",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
